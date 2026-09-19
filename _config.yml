@@ -1,0 +1,18 @@
+title: Bassendean Community Children's Association
+tagline: Keeping Wind in the Willows in our community
+description: >-
+  Bassendean Community Children's Association Inc. is a not-for-profit
+  association seeking to take over the operation of the Wind in the Willows
+  childcare centre in Bassendean, Western Australia.
+email: admin@bassendeancca.org.au
+url: "https://bassendeancca.org.au"
+baseurl: ""
+
+# Jekyll build settings — built by GitHub Pages, no local Ruby/gems needed.
+markdown: kramdown
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+exclude:
+  - README.md
