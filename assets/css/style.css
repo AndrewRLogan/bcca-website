@@ -57,14 +57,22 @@ h2 { font-size: 1.35rem; }
 }
 
 .site-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   font-size: 1.15rem;
   font-weight: 700;
   color: var(--blue-dark);
   text-decoration: none;
   letter-spacing: 0.01em;
+  white-space: nowrap;
 }
 
-.site-title span { color: var(--blue); }
+.site-logo {
+  width: 54px;
+  height: 54px;
+  flex: 0 0 54px;
+}
 
 .site-nav a {
   display: inline-block;
@@ -160,5 +168,7 @@ h2 { font-size: 1.35rem; }
 
 @media (max-width: 560px) {
   .header-inner { flex-direction: column; align-items: flex-start; }
+  .site-title { font-size: 0.78rem; gap: 8px; }
+  .site-logo { width: 42px; height: 42px; flex-basis: 42px; }
   .site-nav a { margin: 0 18px 0 0; }
 }
