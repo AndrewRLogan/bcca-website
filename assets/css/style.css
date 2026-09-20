@@ -65,10 +65,10 @@ h2 { font-size: 1.55rem; }
   align-items: center;
   gap: 12px;
   font-size: 1.18rem;
-  font-weight: 800;
+  font-weight: 700;
   color: var(--blue-dark);
   text-decoration: none;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
   line-height: 1.1;
   font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   white-space: nowrap;
