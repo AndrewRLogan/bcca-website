@@ -213,7 +213,7 @@ h2 { font-size: 1.55rem; }
 /* Footer */
 .site-footer {
   margin-top: 48px;
-  padding: 28px 0 32px;
+  padding: 10px 0 14px;
   background: linear-gradient(180deg, #0d2a67 0%, var(--blue-dark) 100%);
   color: var(--white);
   text-align: center;
@@ -222,6 +222,16 @@ h2 { font-size: 1.55rem; }
 
 .site-footer a { color: #dfe9ff; }
 .site-footer .small { font-size: 0.85rem; color: #bfd3ff; }
+
+.footer-meta {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.footer-meta a {
+  color: #dfe9ff;
+  text-decoration: underline;
+}
 
 @media (max-width: 560px) {
   .header-inner { flex-direction: column; align-items: flex-start; }
