@@ -13,9 +13,14 @@ permalink: /about/
 <h2>Our committee</h2>
 
 {% for member in site.data.committee %}
-<div class="card">
-  <span class="role">{{ member.role }}</span>
-  <h3>{{ member.name }}</h3>
-  <p>{{ member.blurb }}</p>
+<div class="card member-card">
+  {% if member.image %}
+    <img class="member-photo" src="{{ member.image | relative_url }}" alt="{{ member.name }}">
+  {% endif %}
+  <div class="member-copy">
+    <span class="role">{{ member.role }}</span>
+    <h3>{{ member.name }}</h3>
+    <p>{{ member.blurb }}</p>
+  </div>
 </div>
 {% endfor %}
