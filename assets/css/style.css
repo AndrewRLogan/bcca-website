@@ -161,6 +161,26 @@ h2 { font-size: 1.55rem; }
   font-size: 1.2rem;
 }
 
+.member-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.member-copy {
+  flex: 1;
+}
+
+.member-photo {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 2px solid rgba(18, 53, 140, 0.12);
+  background: var(--blue-soft);
+  flex-shrink: 0;
+}
+
 .role {
   display: inline-block;
   margin: 0 0 8px;
@@ -207,4 +227,6 @@ h2 { font-size: 1.55rem; }
   .header-inner { flex-direction: column; align-items: flex-start; }
   .site-nav { gap: 8px 12px; }
   .card { padding: 18px 18px; }
+  .member-card { flex-direction: column; }
+  .member-photo { width: 100%; max-width: 220px; height: auto; aspect-ratio: 1; }
 }
