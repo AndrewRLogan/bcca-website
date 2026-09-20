@@ -56,8 +56,8 @@ h2 { font-size: 1.55rem; }
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  padding-top: 18px;
-  padding-bottom: 18px;
+  padding-top: 4px;
+  padding-bottom: 4px;
 }
 
 .site-title {
