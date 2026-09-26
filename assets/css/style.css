@@ -14,13 +14,24 @@
 
 * { box-sizing: border-box; }
 
+html {
+  background: linear-gradient(180deg, #f8fbff 0%, #edf4ff 100%);
+}
+
 body {
   margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   font-size: 17px;
   line-height: 1.7;
   color: var(--text);
   background: linear-gradient(180deg, #f8fbff 0%, #edf4ff 100%);
+}
+
+main.container {
+  flex: 1 0 auto;
 }
 
 .container {
@@ -50,20 +61,16 @@ h2 { font-size: 1.55rem; }
   box-shadow: 0 2px 12px rgba(18, 53, 140, 0.06);
 }
 
-.header-inner {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  padding-top: 4px;
-  padding-bottom: 4px;
+.site-nav-wrap {
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 
 .site-title {
   display: flex;
   align-items: center;
   gap: 12px;
+  margin-right: 1rem;
   font-size: 1.18rem;
   font-weight: 700;
   color: var(--blue-dark);
@@ -71,7 +78,7 @@ h2 { font-size: 1.55rem; }
   letter-spacing: -0.01em;
   line-height: 1.1;
   font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-  white-space: nowrap;
+  white-space: normal;
 }
 
 .site-logo {
@@ -83,23 +90,37 @@ h2 { font-size: 1.55rem; }
   flex-shrink: 0;
 }
 
-.site-title span {
-  color: var(--blue-dark);
+.site-title-text {
   display: inline-flex;
   align-items: center;
+  color: var(--blue-dark);
+  white-space: nowrap;
+  transition: opacity 0.2s ease, max-width 0.25s ease, transform 0.25s ease;
+}
+
+.full-title {
+  display: inline-flex;
+  max-width: 28rem;
+  overflow: hidden;
+}
+
+.short-title {
+  display: none;
+  opacity: 0;
+  max-width: 0;
+  overflow: hidden;
+  pointer-events: none;
 }
 
 .site-nav {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   gap: 10px 18px;
   font-size: 0.944rem;
+  padding-top: 2px;
 }
 
-.site-nav a {
-  display: inline-flex;
-  align-items: center;
+.site-nav .nav-link {
   padding: 0;
   color: var(--blue-dark);
   text-decoration: none;
@@ -108,9 +129,49 @@ h2 { font-size: 1.55rem; }
   border-bottom: 3px solid transparent;
 }
 
-.site-nav a:hover,
-.site-nav a.active {
+.site-nav .nav-link:hover,
+.site-nav .nav-link.active {
   border-bottom-color: var(--accent);
+  color: var(--blue-dark);
+}
+
+.navbar-toggler {
+  border: none;
+  padding: 0.25rem 0.5rem;
+  color: var(--blue-dark);
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(18, 53, 140, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+@media (max-width: 905px) {
+  .site-title {
+    font-size: 1.02rem;
+    margin-right: auto;
+  }
+
+  .full-title {
+    display: none;
+    opacity: 0;
+    max-width: 0;
+    margin-right: 0;
+  }
+
+  .short-title {
+    display: inline-flex;
+    opacity: 1;
+    max-width: 4rem;
+  }
+
+  .site-nav {
+    gap: 10px 0;
+    padding-top: 6px;
+  }
 }
 
 /* Hero */
@@ -169,12 +230,30 @@ h2 { font-size: 1.55rem; }
 
 .member-card {
   display: flex;
-  align-items: flex-start;
+  flex-direction: row;
+  align-items: center;
   gap: 20px;
+}
+
+.member-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 150px;
+  text-align: center;
+}
+
+.member-name-left {
+  margin: 0 0 10px;
+  font-size: 1.25rem;
+  line-height: 1.2;
+  color: var(--blue-dark);
 }
 
 .member-copy {
   flex: 1;
+  align-self: center;
 }
 
 .member-photo {
@@ -189,7 +268,7 @@ h2 { font-size: 1.55rem; }
 
 .role {
   display: inline-block;
-  margin: 0 0 8px;
+  margin-top: 10px;
   padding: 4px 10px;
   border-radius: 999px;
   background: rgba(244, 185, 66, 0.18);
@@ -198,6 +277,22 @@ h2 { font-size: 1.55rem; }
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+}
+
+@media (max-width: 640px) {
+  .member-card {
+    flex-direction: column;
+  }
+
+  .member-profile {
+    width: 100%;
+    align-items: center;
+  }
+
+  .role {
+    margin-top: 8px;
+    text-align: center;
+  }
 }
 
 .support-list {

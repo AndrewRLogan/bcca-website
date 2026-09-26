@@ -1,14 +1,23 @@
 <header class="site-header">
-  <div class="container header-inner">
-    <a class="site-title" href="{{ '/' | relative_url }}">
-      <img src="{{ '/assets/img/bccalogo.jpeg' | relative_url }}" alt="Bassendean Community Children's Association logo" class="site-logo">
-      <span>Bassendean Community Children's Association</span>
-    </a>
-    <nav class="site-nav">
-      {% for item in site.data.navigation %}
-        <a href="{{ item.url | relative_url }}"
-           class="{% if page.url == item.url %}active{% endif %}">{{ item.title }}</a>
-      {% endfor %}
+  <div class="container">
+    <nav class="navbar navbar-expand-sm navbar-light site-nav-wrap" aria-label="Main navigation">
+      <a class="navbar-brand site-title" href="{{ '/' | relative_url }}">
+        <img src="{{ '/assets/img/bccalogo.jpeg' | relative_url }}" alt="Bassendean Community Children's Association logo" class="site-logo">
+        <span class="site-title-text full-title">Bassendean Community Children's Association</span>
+        <span class="site-title-text short-title" aria-label="BCCA">BCCA</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteNav" aria-controls="siteNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="siteNav">
+        <div class="navbar-nav site-nav">
+          {% for item in site.data.navigation %}
+            <a class="nav-link{% if page.url == item.url %} active{% endif %}" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+          {% endfor %}
+        </div>
+      </div>
     </nav>
   </div>
 </header>
