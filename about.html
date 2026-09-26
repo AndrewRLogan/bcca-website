@@ -4,23 +4,109 @@ title: About Us
 permalink: /about/
 ---
 
-<p>
-  Bassendean Community Children&rsquo;s Association Inc. is a not-for-profit
-  incorporated association formed by local parents and community members. Our
-  committee is made up of volunteers who live and work in and around Bassendean.
-</p>
-
-<h2>Our committee</h2>
-
-{% for member in site.data.committee %}
-<div class="card member-card">
-  {% if member.image %}
-    <img class="member-photo" src="{{ member.image | relative_url }}" alt="{{ member.name }}">
-  {% endif %}
-  <div class="member-copy">
-    <span class="role">{{ member.role }}</span>
-    <h3>{{ member.name }}</h3>
-    <p>{{ member.blurb }}</p>
-  </div>
+<div class="card">
+  <h2>What is the Bassendean Community Children&rsquo;s Association Inc.?</h2>
+  <p>
+    We are a group of committed parents and community members who are dedicated to the continued operation of
+    <strong>Wind in the Willows</strong> while restoring the stability that was lost during the period of uncertainty.
+    We established a not-for-profit incorporated association in May this year and intend to submit a proposal to the
+    Town of Bassendean for the transfer of the service.
+  </p>
+  <p>
+    We have been working hard behind the scenes, preparing to become an approved daycare operator and learning from
+    parent and community-led centres such as Little Possums, Marjorie Mann and other organisations that operate as
+    community-managed not-for-profits. We have also been collaborating with peak agencies that support this model to
+    ensure we are ready to create something exceptional for Bassendean families.
+  </p>
 </div>
-{% endfor %}
+
+<div class="card">
+  <h2>How would a parent and community-led not-for-profit childcare model work?</h2>
+  <p>
+    A parent and community-led committee would become legally responsible for the service upon transfer. The Willows
+    Manager and Assistant Manager would continue to oversee the day-to-day running of the centre in accordance with
+    existing policies and procedures and would attend meetings with the committee, so there would be minimal disruption
+    to daily operations.
+  </p>
+  <p>
+    A parent and community-led committee would meet monthly with the Manager to oversee governance and operational
+    matters. The committee would consider organisational issues, pass motions and vote on key decisions relating to the
+    centre. It would ultimately be responsible for the overall operation of the service, including financial oversight,
+    with the assistance and guidance of the Manager.
+  </p>
+</div>
+
+<div class="card">
+  <h2>Who is on the committee?</h2>
+  <p>
+    Our community is currently made up of parents and community members with backgrounds in accounting, law, child
+    health, governance, compliance and government. If the Town agrees to transfer the service to us, it is our intention
+    to hold an Annual General Meeting in late 2026 or early 2027 so anyone with relevant skills and/or experience can
+    also apply to become a committee member. Committee members would be appointed through an election process, and
+    members of the organisation would be eligible to vote.
+  </p>
+  <p>
+    We would love you to become a member and help build the future of a community-led early childhood service for
+    Bassendean.
+  </p>
+</div>
+
+<div class="card">
+  <h2>What does becoming an ordinary member involve?</h2>
+  <p>
+    Any person who supports the objects or purposes of the Association is eligible to apply to become a member. The
+    Bassendean Community Children&rsquo;s Association Inc. is made up of office-holding committee members and ordinary
+    committee members, alongside ordinary members who are able to vote at Annual General Meetings and elect committee
+    members.
+  </p>
+  <p>
+    Any parent or community member can become a member by submitting an application and paying a $5 membership fee. If
+    the proposal is not ultimately successful, the membership fee is refunded.
+  </p>
+  <p>
+    Membership support can also be provided by bank transfer to:<br>
+    <strong>Account name:</strong> Bassendean Community Children&rsquo;s Association Inc.<br>
+    <strong>BSB:</strong> 066112<br>
+    <strong>Account number:</strong> 10605123
+  </p>
+</div>
+
+<div class="card">
+  <h2>Potential benefits of a community-led committee</h2>
+  <ul class="support-list">
+    <li>Willows would remain locally owned and supported by the community it serves.</li>
+    <li>From the perspective of children and educators, the centre would operate similarly to how it does now.</li>
+    <li>There would be opportunities for community fundraising initiatives to support equipment upgrades, educational resources and facility improvements.</li>
+    <li>Lower fees could be offered as committee members volunteer and funds are directed toward staff, resources and service improvements.</li>
+    <li>Our community includes many capable professionals who could contribute valuable expertise.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h2>Our committee</h2>
+
+  {% for member in site.data.committee %}
+  <div class="card member-card">
+    {% if member.image %}
+      <img class="member-photo" src="{{ member.image | relative_url }}" alt="{{ member.name }}">
+    {% endif %}
+    <div class="member-copy">
+      <span class="role">{{ member.role }}</span>
+      <h3>{{ member.name }}</h3>
+      <p>{{ member.blurb }}</p>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+<div class="card">
+  <h2>Become involved</h2>
+  <p>
+    We welcome anyone who has skills or professional experience that may assist us, especially in governance,
+    organisational management, specific childcare knowledge and fundraising.
+  </p>
+  <p>
+    If you would like to get involved, please <a href="{{ '/contact/' | relative_url }}">contact us</a> or visit the
+    <a href="{{ '/support/' | relative_url }}">support page</a> to learn how you can donate or become a member.
+  </p>
+</div>
