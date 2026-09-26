@@ -5,7 +5,7 @@ permalink: /about/
 ---
 
 <div class="card">
-  <h2>What is the Bassendean Community Children&rsquo;s Association Inc.?</h2>
+  <h2>Who are we?</h2>
   <p>
     We are a group of committed parents and community members who are dedicated to the continued operation of
     <strong>Wind in the Willows</strong> while restoring the stability that was lost during the period of uncertainty.
@@ -21,7 +21,7 @@ permalink: /about/
 </div>
 
 <div class="card">
-  <h2>How would a parent and community-led not-for-profit childcare model work?</h2>
+  <h2>How would it work?</h2>
   <p>
     A parent and community-led committee would become legally responsible for the service upon transfer. The Willows
     Manager and Assistant Manager would continue to oversee the day-to-day running of the centre in accordance with
@@ -37,9 +37,25 @@ permalink: /about/
 </div>
 
 <div class="card">
-  <h2>Who is on the committee?</h2>
+  <h2>Our committee</h2>
+
+  {% for member in site.data.committee %}
+  <div class="card member-card">
+    <div class="member-profile">
+      <h3 class="member-name-left">{{ member.name }}</h3>
+      {% if member.image %}
+        <img class="member-photo" src="{{ member.image | relative_url }}" alt="{{ member.name }}">
+      {% endif %}
+      <span class="role">{{ member.role }}</span>
+    </div>
+    <div class="member-copy">
+      <p>{{ member.blurb }}</p>
+    </div>
+  </div>
+  {% endfor %}
+
   <p>
-    Our community is currently made up of parents and community members with backgrounds in accounting, law, child
+    Our committee is currently made up of parents and community members with backgrounds in accounting, law, child
     health, governance, compliance and government. If the Town agrees to transfer the service to us, it is our intention
     to hold an Annual General Meeting in late 2026 or early 2027 so anyone with relevant skills and/or experience can
     also apply to become a committee member. Committee members would be appointed through an election process, and
@@ -49,54 +65,6 @@ permalink: /about/
     We would love you to become a member and help build the future of a community-led early childhood service for
     Bassendean.
   </p>
-</div>
-
-<div class="card">
-  <h2>What does becoming an ordinary member involve?</h2>
-  <p>
-    Any person who supports the objects or purposes of the Association is eligible to apply to become a member. The
-    Bassendean Community Children&rsquo;s Association Inc. is made up of office-holding committee members and ordinary
-    committee members, alongside ordinary members who are able to vote at Annual General Meetings and elect committee
-    members.
-  </p>
-  <p>
-    Any parent or community member can become a member by submitting an application and paying a $5 membership fee. If
-    the proposal is not ultimately successful, the membership fee is refunded.
-  </p>
-  <p>
-    Membership support can also be provided by bank transfer to:<br>
-    <strong>Account name:</strong> Bassendean Community Children&rsquo;s Association Inc.<br>
-    <strong>BSB:</strong> 066112<br>
-    <strong>Account number:</strong> 10605123
-  </p>
-</div>
-
-<div class="card">
-  <h2>Potential benefits of a community-led committee</h2>
-  <ul class="support-list">
-    <li>Willows would remain locally owned and supported by the community it serves.</li>
-    <li>From the perspective of children and educators, the centre would operate similarly to how it does now.</li>
-    <li>There would be opportunities for community fundraising initiatives to support equipment upgrades, educational resources and facility improvements.</li>
-    <li>Lower fees could be offered as committee members volunteer and funds are directed toward staff, resources and service improvements.</li>
-    <li>Our community includes many capable professionals who could contribute valuable expertise.</li>
-  </ul>
-</div>
-
-<div class="card">
-  <h2>Our committee</h2>
-
-  {% for member in site.data.committee %}
-  <div class="card member-card">
-    {% if member.image %}
-      <img class="member-photo" src="{{ member.image | relative_url }}" alt="{{ member.name }}">
-    {% endif %}
-    <div class="member-copy">
-      <span class="role">{{ member.role }}</span>
-      <h3>{{ member.name }}</h3>
-      <p>{{ member.blurb }}</p>
-    </div>
-  </div>
-  {% endfor %}
 </div>
 
 <div class="card">
