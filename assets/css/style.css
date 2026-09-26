@@ -85,20 +85,26 @@ h2 { font-size: 1.55rem; }
 
 .site-title span {
   color: var(--blue-dark);
+  display: inline-flex;
+  align-items: center;
 }
 
 .site-nav {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 10px 18px;
+  font-size: 0.944rem;
 }
 
 .site-nav a {
-  display: inline-block;
-  padding: 7px 2px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0;
   color: var(--blue-dark);
   text-decoration: none;
   font-weight: 700;
+  line-height: 1.1;
   border-bottom: 3px solid transparent;
 }
 
@@ -192,6 +198,26 @@ h2 { font-size: 1.55rem; }
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+}
+
+.support-list {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.support-list li + li {
+  margin-top: 0.6rem;
+}
+
+.donation-box {
+  display: inline-block;
+  background: var(--blue-pale);
+  border: 1px solid rgba(18, 53, 140, 0.12);
+  border-radius: 14px;
+  padding: 18px 20px;
+  margin-top: 8px;
+  color: var(--blue-dark);
+  line-height: 1.7;
 }
 
 .button {
