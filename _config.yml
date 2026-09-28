@@ -5,8 +5,8 @@ description: >-
   association seeking to take over the operation of the Wind in the Willows
   childcare centre in Bassendean, Western Australia.
 email: admin@bassendeancca.org.au
-url: "https://andrewrlogan.github.io"
-baseurl: "/bcca-website"
+url: "https://www.bassendeancca.org.au"
+baseurl: ""
 
 remote_theme: "jekyll/minima@1e8a445"
 markdown: kramdown
