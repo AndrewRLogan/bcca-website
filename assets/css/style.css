@@ -337,6 +337,31 @@ h2 { font-size: 1.55rem; }
   color: #1d1f24;
 }
 
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--blue-dark);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.social-link:hover {
+  text-decoration: underline;
+}
+
+.social-link img {
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+
 /* Footer */
 .site-footer {
   margin-top: 48px;
