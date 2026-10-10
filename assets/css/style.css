@@ -407,11 +407,18 @@ h2 { font-size: 1.55rem; }
   max-width: 45vw;
 }
 
-.footer-meta {
+.site-footer .footer-meta {
   width: 100%;
   margin: 0;
-  line-height: 1.5;
+  font-size: 0.81rem;
+  line-height: 1;
   text-align: center;
+}
+
+.footer-disclaimer {
+  display: inline-block;
+  font-size: 0.68rem;
+  line-height: 1;
 }
 
 .footer-meta a {
@@ -424,6 +431,7 @@ h2 { font-size: 1.55rem; }
     display: grid;
     grid-template-columns: auto minmax(0, 1fr);
     column-gap: 20px;
+    align-items: center;
   }
 
   .footer-membership {
